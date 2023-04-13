@@ -28,5 +28,6 @@ pool:
     
     - task: PublishPipelineArtifact@1
       inputs:
-        targetPath: '$(Pipeline.Workspace)'
+        targetPath: '$(System.DefaultWorkingDirectory)/_anirbanLab_BddAzure/target/cucumber-report/CucumberExtentLogReport.html'
         publishLocation: 'pipeline'
+        artifact: TestResult
