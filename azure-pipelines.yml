@@ -7,18 +7,26 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
   demands:
    Agent.Version -equals 3.218.0
 
-steps:
-- task: Maven@3
+- task: Maven@4
   inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    mavenPomFile: '$(System.DefaultWorkingDirectory)/_anirbanLab_BddAzure/pom.xml'
     goals: 'package'
+    publishJUnitResults: true
+    testResultsFiles: '$(System.DefaultWorkingDirectory)/_anirbanLab_BddAzure/TestNG.xml'
+    javaHomeOption: 'Path'
+    jdkDirectory: 'C:\Program Files\Java\jdk-12'
+    mavenVersionOption: 'Path'
+    mavenDirectory: 'C:\Users\anirban.choudhuri\apache-maven-3.9.1-bin\apache-maven-3.9.1'
+    mavenSetM2Home: true
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
+    
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(Pipeline.Workspace)'
+        publishLocation: 'pipeline'
