@@ -10,7 +10,7 @@ jobs:
     pool:
      vmImage: windows-latest
      demands:
-     - Agent.Version -equals 3.218.0
+     - Agent.Name -equals USABOS217030L
     steps:
       - task: Maven@4
         inputs:
