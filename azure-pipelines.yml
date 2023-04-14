@@ -29,7 +29,7 @@ jobs:
       - task: DeleteFiles@1
         continueOnError: true
         inputs:
-          SourceFolder: 'C:/target/*'
+          SourceFolder: 'C:/target/*.*'
           Contents: 'delete files under target folder'
       - task: CopyFiles@2
         continueOnError: true
@@ -46,7 +46,7 @@ jobs:
           artifact: TestResult
       - task: PublishHtmlReport@1
         inputs:
-          reportDir: 'target\cucumber-report\CucumberExtentLogReport.html'
+          reportDir: 'C:/target/cucumber-report/CucumberExtentLogReport.html'
       - task: NodeTool@0
         displayName: 'Install Node 12.x'
         inputs:
