@@ -25,6 +25,14 @@ jobs:
          mavenAuthenticateFeed: false
          effectivePomSkip: false
          sonarQubeRunAnalysis: false
+      
+      - task: CopyFiles@2
+        inputs:
+          SourceFolder: 'target/cucumber-report/'
+          Contents: '**'
+          TargetFolder: 'C:/target/cucumber-report/'
+          OverWrite: true
+          preserveTimestamp: true
       - task: PublishPipelineArtifact@1
         inputs:
           targetPath: '/target/cucumber-report/CucumberExtentLogReport.html'
