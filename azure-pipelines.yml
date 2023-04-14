@@ -9,7 +9,7 @@ jobs:
   - job: job1
     pool:
      vmImage: windows-latest
-     name: USABOS217030L
+     name: Default
     steps:
       - task: Maven@4
         inputs:
