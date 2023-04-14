@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 13 21:30:11 EDT 2023</td>
+<td>Started on:</td><td>Fri Apr 14 08:51:00 EDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>9 seconds (9943 ms)</td>
+<tr><td>Total time:</td><td>28 seconds (28010 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,28 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.anirban.framework.selenium.bdd.runner.CucumberTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.anirban.framework.selenium.bdd.runner.CucumberTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User doing a google search.", "Google Search"</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.anirban.framework.testng.util.Assert.contains(Assert.java:42)
+	at com.anirban.framework.selenium.bdd.stepDef.GoogleSearchStepDef.user_gets_into_the_result_page(GoogleSearchStepDef.java:52)
+	at ?.User gets into the result page.(file:///D:/OneDrive%20-%20Infosys%20Limited/projects/eclipse/workspace2/BDDSeleTest/src/test/resources/features/GoogleSearch.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1694073314", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1694073314'><pre>java.lang.NullPointerException
+	at com.anirban.framework.testng.util.Assert.contains(Assert.java:42)
+	at com.anirban.framework.selenium.bdd.stepDef.GoogleSearchStepDef.user_gets_into_the_result_page(GoogleSearchStepDef.java:52)
+	at ?.User gets into the result page.(file:///D:/OneDrive%20-%20Infosys%20Limited/projects/eclipse/workspace2/BDDSeleTest/src/test/resources/features/GoogleSearch.feature:7)
+</pre></div></td>
+<td>25</td>
+<td>com.anirban.framework.selenium.bdd.runner.CucumberTestRunner@27462a88</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>

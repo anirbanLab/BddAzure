@@ -12,7 +12,7 @@ import io.cucumber.testng.CucumberOptions;
         glue = {"com/anirban/framework/selenium/bdd/stepDef"},
         plugin= {"pretty", "json:target/cucumber-reports.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" },
        // plugin= {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-       // dryRun=true,
+        //dryRun=true,
         monochrome=true
        
 )

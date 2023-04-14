@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.025 sec
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 31.301 sec <<< FAILURE!
+runScenario(com.anirban.framework.selenium.bdd.runner.CucumberTestRunner)  Time elapsed: 25.153 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.anirban.framework.testng.util.Assert.contains(Assert.java:42)
+	at com.anirban.framework.selenium.bdd.stepDef.GoogleSearchStepDef.user_gets_into_the_result_page(GoogleSearchStepDef.java:52)
+	at ?.User gets into the result page.(file:///D:/OneDrive%20-%20Infosys%20Limited/projects/eclipse/workspace2/BDDSeleTest/src/test/resources/features/GoogleSearch.feature:7)
+
