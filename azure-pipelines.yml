@@ -38,3 +38,6 @@ jobs:
           targetPath: '/target/cucumber-report/CucumberExtentLogReport.html'
           publishLocation: 'pipeline'
           artifact: TestResult
+      - task: PublishHtmlReport@1
+        inputs:
+          reportDir: 'target\cucumber-report'
