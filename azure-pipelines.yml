@@ -41,6 +41,10 @@ jobs:
       - task: PublishHtmlReport@1
         inputs:
           reportDir: 'target\cucumber-report\CucumberExtentLogReport.html'
+      - task: NodeTool@0
+        displayName: 'Install Node 12.x'
+        inputs:
+         versionSpec: 12.x
       - task: PublishCucumberReport@1
         inputs:
           jsonDir: '/target/cucumber-reports.json'
