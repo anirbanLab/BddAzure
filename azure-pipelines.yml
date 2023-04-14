@@ -28,9 +28,9 @@ jobs:
       
       - task: CopyFiles@2
         inputs:
-          SourceFolder: 'target/cucumber-report/'
+          SourceFolder: 'target'
           Contents: '**'
-          TargetFolder: 'C:/target/cucumber-report/'
+          TargetFolder: 'C:/target'
           OverWrite: true
           preserveTimestamp: true
       - task: PublishPipelineArtifact@1
@@ -41,3 +41,15 @@ jobs:
       - task: PublishHtmlReport@1
         inputs:
           reportDir: 'target\cucumber-report\CucumberExtentLogReport.html'
+      - task: NodeTool@0
+        displayName: 'Install Node 12.x'
+        inputs:
+         versionSpec: 12.x
+      - task: PublishCucumberReport@1
+        inputs:
+          jsonDir: '/target/'
+          outputPath: '/target/'
+          theme: 'bootstrap'
+          reportSuiteAsScenarios: true
+          name: 'HTML_REPORT_CUCUMBER'
+          title: 'Execution report'
