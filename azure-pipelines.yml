@@ -26,6 +26,11 @@ jobs:
          mavenAuthenticateFeed: false
          effectivePomSkip: false
          sonarQubeRunAnalysis: false
+      - task: DeleteFiles@1
+        continueOnError: true
+        inputs:
+          SourceFolder: 'C:/target/*'
+          Contents: 'delete files under target folder'
       - task: CopyFiles@2
         continueOnError: true
         inputs:
