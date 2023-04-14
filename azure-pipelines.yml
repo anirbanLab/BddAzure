@@ -25,7 +25,11 @@ jobs:
          mavenAuthenticateFeed: false
          effectivePomSkip: false
          sonarQubeRunAnalysis: false
-      
+  - job: reporting   
+    pool:
+     vmImage: windows-latest
+     name: Default
+    steps:
       - task: CopyFiles@2
         inputs:
           SourceFolder: 'target'
