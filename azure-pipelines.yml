@@ -28,9 +28,9 @@ jobs:
       
       - task: CopyFiles@2
         inputs:
-          SourceFolder: 'target/cucumber-report/'
+          SourceFolder: 'target'
           Contents: '**'
-          TargetFolder: 'C:/target/cucumber-report/'
+          TargetFolder: 'C:/target'
           OverWrite: true
           preserveTimestamp: true
       - task: PublishPipelineArtifact@1
@@ -45,13 +45,6 @@ jobs:
         displayName: 'Install Node 12.x'
         inputs:
          versionSpec: 12.x
-      - task: CopyFiles@2
-        inputs:
-          SourceFolder: 'target/cucumber-reports.json'
-          Contents: '**'
-          TargetFolder: 'C:/target/cucumber-reports.json'
-          OverWrite: true
-          preserveTimestamp: true
       - task: PublishCucumberReport@1
         inputs:
           jsonDir: '/target/cucumber-reports.json'
