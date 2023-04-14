@@ -13,10 +13,10 @@ jobs:
     steps:
       - task: Maven@4
         inputs:
-         mavenPomFile: '$(System.DefaultWorkingDirectory)/_anirbanLab_BddAzure/pom.xml'
+         mavenPomFile: 'pom.xml'
          goals: 'package'
          publishJUnitResults: true
-         testResultsFiles: '$(System.DefaultWorkingDirectory)/_anirbanLab_BddAzure/TestNG.xml'
+         testResultsFiles: 'TestNG.xml'
          javaHomeOption: 'Path'
          jdkDirectory: 'C:\Program Files\Java\jdk-12'
          mavenVersionOption: 'Path'
@@ -27,6 +27,6 @@ jobs:
          sonarQubeRunAnalysis: false
       - task: PublishPipelineArtifact@1
         inputs:
-          targetPath: '$(System.DefaultWorkingDirectory)/_anirbanLab_BddAzure/target/cucumber-report/CucumberExtentLogReport.html'
+          targetPath: '/target/cucumber-report/CucumberExtentLogReport.html'
           publishLocation: 'pipeline'
           artifact: TestResult
