@@ -47,9 +47,9 @@ jobs:
          versionSpec: 12.x
       - task: CopyFiles@2
         inputs:
-          SourceFolder: 'target/cucumber-report/'
+          SourceFolder: 'target/cucumber-reports.json'
           Contents: '**'
-          TargetFolder: 'C:/target/cucumber-report/'
+          TargetFolder: 'C:/target/cucumber-reports.json'
           OverWrite: true
           preserveTimestamp: true
       - task: PublishCucumberReport@1
