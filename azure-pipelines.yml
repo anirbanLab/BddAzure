@@ -12,6 +12,7 @@ jobs:
      name: Default
     steps:
       - task: Maven@4
+        continueOnError: true
         inputs:
          mavenPomFile: 'pom.xml'
          goals: 'package'
@@ -25,12 +26,8 @@ jobs:
          mavenAuthenticateFeed: false
          effectivePomSkip: false
          sonarQubeRunAnalysis: false
-  - job: reporting   
-    pool:
-     vmImage: windows-latest
-     name: Default
-    steps:
       - task: CopyFiles@2
+        continueOnError: true
         inputs:
           SourceFolder: 'target'
           Contents: '**'
