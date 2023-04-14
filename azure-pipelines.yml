@@ -40,4 +40,4 @@ jobs:
           artifact: TestResult
       - task: PublishHtmlReport@1
         inputs:
-          reportDir: 'target\cucumber-report'
+          reportDir: 'target\cucumber-report\CucumberExtentLogReport.html'
