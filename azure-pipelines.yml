@@ -41,3 +41,11 @@ jobs:
       - task: PublishHtmlReport@1
         inputs:
           reportDir: 'target\cucumber-report\CucumberExtentLogReport.html'
+      - task: PublishCucumberReport@1
+        inputs:
+          jsonDir: '$(System.DefaultWorkingDirectory)/target/cucumber-reports.json'
+          outputPath: '$(System.DefaultWorkingDirectory)/target/cucumber-reports.json'
+          theme: 'bootstrap'
+          reportSuiteAsScenarios: true
+          name: 'HTML_REPORT_CUCUMBER'
+          title: 'Execution report'
