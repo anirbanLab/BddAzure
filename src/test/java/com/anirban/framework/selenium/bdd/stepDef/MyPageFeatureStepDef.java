@@ -17,7 +17,7 @@ public class MyPageFeatureStepDef {
 	public void the_user_launches_the_login_page() {
       // ExtentCucumberAdapter.addTestStepLog("--------------- Launching the login page --------------------");
        ExtentCucumberAdapter.getCurrentStep().log(Status.INFO, "My Log 1");  
-       ExtentCucumberAdapter.getCurrentStep().log(Status.WARNING, "My Log 1");
+       ExtentCucumberAdapter.getCurrentStep().log(Status.INFO, "My Log 1");
 	}
 	@Given("The user enters {string} and {string}.")
 	public void the_user_enters_and(String string, String string2) {
