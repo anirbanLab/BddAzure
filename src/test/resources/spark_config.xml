@@ -20,7 +20,7 @@
 		<reportName>Grasshopper Report</reportName>
 
 		<!-- view report without internet -->
-		<offlineMode>true</offlineMode>
+		<offlineMode>false</offlineMode>
 
 		<thumbnailForBase64>true</thumbnailForBase64>
 

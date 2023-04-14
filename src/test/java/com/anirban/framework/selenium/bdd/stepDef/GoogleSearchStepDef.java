@@ -1,5 +1,7 @@
 package com.anirban.framework.selenium.bdd.stepDef;
 
+import java.time.Duration;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -48,6 +50,7 @@ public class GoogleSearchStepDef {
 
 	@Then("User gets into the result page.")
 	public void user_gets_into_the_result_page() {
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofMillis(2000));
 		String s=driver.getTitle();
 		Assert.contains(Assert.HARD, searchString, s);
 	}
