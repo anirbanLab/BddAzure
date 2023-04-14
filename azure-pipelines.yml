@@ -9,8 +9,7 @@ jobs:
   - job: job1
     pool:
      vmImage: windows-latest
-     demands:
-     - Agent.Name -equals USABOS217030L
+     name: USABOS217030L
     steps:
       - task: Maven@4
         inputs:
