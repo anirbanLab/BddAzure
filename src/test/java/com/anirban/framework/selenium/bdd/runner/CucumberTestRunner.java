@@ -10,7 +10,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = {"src/test/resources/features"},
         glue = {"com/anirban/framework/selenium/bdd/stepDef"},
-        plugin= {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+        plugin= {"pretty", "json:target/cucumber-reports.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" },
+       // plugin= {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
        // dryRun=true,
         monochrome=true
        
