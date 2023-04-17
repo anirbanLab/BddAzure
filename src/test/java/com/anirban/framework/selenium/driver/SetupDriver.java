@@ -54,6 +54,8 @@ public class SetupDriver {
 		}
 		else if(sbrowser.equalsIgnoreCase("edge")) {
 			edgOPt=new EdgeOptions();
+			edgOPt.addArguments("--no-sandbox");
+			edgOPt.addArguments("--disable-dev-shm-usage");
 			edgOPt.setAcceptInsecureCerts(true);
 			if(sMode.equalsIgnoreCase("GRID"))
 				driver= new RemoteWebDriver(new URL(server),edgOPt );
