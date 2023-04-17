@@ -29,14 +29,14 @@ jobs:
       - task: DeleteFiles@1
         continueOnError: true
         inputs:
-          SourceFolder: 'C:/target/*.*'
+          SourceFolder: 'D:/target/*.*'
           Contents: 'delete files under target folder'
       - task: CopyFiles@2
         continueOnError: true
         inputs:
           SourceFolder: 'target'
           Contents: '**'
-          TargetFolder: 'C:/target'
+          TargetFolder: 'D:/target'
           OverWrite: true
           preserveTimestamp: true
       - task: PublishPipelineArtifact@1
