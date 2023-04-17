@@ -18,7 +18,7 @@ jobs:
           azureContainerRegistry: '{"loginServer":"registryarc.azurecr.io", "id" : "/subscriptions/cca1ed89-ca0a-432f-b3dd-1dee7e2db00c/resourceGroups/sg-rg-na/providers/Microsoft.ContainerRegistry/registries/registryarc"}'
           dockerComposeFile: 'docker-compose.yml'
           action: 'Run a Docker Compose command'
-          dockerComposeCommand: 'docker compose up --detach'
+          dockerComposeCommand: 'docker-compose -f docker-compose.yml up'
       - task: Maven@4
         continueOnError: true
         inputs:
@@ -74,4 +74,4 @@ jobs:
           azureContainerRegistry: '{"loginServer":"registryarc.azurecr.io", "id" : "/subscriptions/cca1ed89-ca0a-432f-b3dd-1dee7e2db00c/resourceGroups/sg-rg-na/providers/Microsoft.ContainerRegistry/registries/registryarc"}'
           dockerComposeFile: 'docker-compose.yml'
           action: 'Run a Docker Compose command'
-          dockerComposeCommand: 'docker compose down'
+          dockerComposeCommand: 'docker-compose down -f docker-compose.yml'
