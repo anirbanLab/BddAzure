@@ -65,5 +65,4 @@ public class GoogleSearchStepDef {
 		Assert.assertEquals(s, searchString);
 	}
 	
-	@After
 }
