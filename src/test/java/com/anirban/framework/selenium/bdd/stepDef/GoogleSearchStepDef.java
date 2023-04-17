@@ -1,11 +1,14 @@
 package com.anirban.framework.selenium.bdd.stepDef;
 
+import java.net.URL;
 import java.time.Duration;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 
 import com.anirban.framework.selenium.core.GetElement;
@@ -23,7 +26,10 @@ public class GoogleSearchStepDef {
 	@Given("The user launches google page.")
 	public void the_user_launches_google_page() {
 		try {
-			driver=SetupDriver.getDriver("edge", "GRID", "http://192.168.1.105:4444/wd/hub");
+			driver=SetupDriver.getDriver("edge", "GRID", "http://localhost:4444/wd/hub");
+			//EdgeOptions edgOPt=new EdgeOptions();
+			//edgOPt.setAcceptInsecureCerts(true);
+			//driver =new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), edgOPt);
 		}catch(Exception exp) {
 			exp.printStackTrace();
 		}
@@ -58,4 +64,6 @@ public class GoogleSearchStepDef {
 		//Assert.assertEquals(true, false);
 		Assert.assertEquals(s, searchString);
 	}
+	
+	@After
 }

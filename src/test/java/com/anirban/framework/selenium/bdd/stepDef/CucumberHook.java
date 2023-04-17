@@ -28,7 +28,7 @@ public class CucumberHook {
 	            final byte[] screenshot = ((TakesScreenshot)SetupDriver.getDriver()).getScreenshotAs(OutputType.BYTES);
 	            scenario.attach(screenshot, "image/png", scenario.getName()); 
 	        }      
-	        SetupDriver.quitDriver();
+	       SetupDriver.quitDriver();
 	    }
 	    //@AFter
 }

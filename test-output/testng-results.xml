@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="4" passed="0" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-17T09:25:39 EDT" name="Suite" finished-at="2023-04-17T09:25:47 EDT" duration-ms="7666">
+  <suite started-at="2023-04-17T11:14:37 EDT" name="Suite" finished-at="2023-04-17T11:14:51 EDT" duration-ms="14520">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.anirban.framework.selenium.bdd.runner.CucumberTestRunner@3590fc5b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-04-17T09:25:39 EDT" name="Test" finished-at="2023-04-17T09:25:47 EDT" duration-ms="7666">
+    <test started-at="2023-04-17T11:14:37 EDT" name="Test" finished-at="2023-04-17T11:14:51 EDT" duration-ms="14520">
       <class name="com.anirban.framework.selenium.bdd.runner.CucumberTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.anirban.framework.selenium.bdd.runner.CucumberTestRunner@3590fc5b]" started-at="2023-04-17T09:25:40 EDT" name="setUpClass" finished-at="2023-04-17T09:25:41 EDT" duration-ms="1651" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.anirban.framework.selenium.bdd.runner.CucumberTestRunner@3590fc5b]" started-at="2023-04-17T11:14:37 EDT" name="setUpClass" finished-at="2023-04-17T11:14:39 EDT" duration-ms="1901" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3c9ef6e9]]>
+                <![CDATA[org.testng.TestRunner@52b959df]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.anirban.framework.selenium.bdd.runner.CucumberTestRunner@3590fc5b]" started-at="2023-04-17T09:25:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-17T09:25:46 EDT" duration-ms="5040" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.anirban.framework.selenium.bdd.runner.CucumberTestRunner@3590fc5b]" started-at="2023-04-17T11:14:39 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-17T11:14:48 EDT" duration-ms="9732" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at com.anirban.framework.selenium.bdd.stepDef.GoogleSearchStepDef.the_user_launches_google_page(GoogleSearchStepDef.java:30)
+at com.anirban.framework.selenium.bdd.stepDef.GoogleSearchStepDef.the_user_launches_google_page(GoogleSearchStepDef.java:37)
 at ✽.The user launches google page.(file:///D:/OneDrive%20-%20Infosys%20Limited/projects/eclipse/workspace2/BDDSeleTest/src/test/resources/features/GoogleSearch.feature:4)
 ]]>
             </full-stacktrace>
@@ -45,7 +45,7 @@ at ✽.The user launches google page.(file:///D:/OneDrive%20-%20Infosys%20Limite
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.anirban.framework.selenium.bdd.runner.CucumberTestRunner@3590fc5b]" started-at="2023-04-17T09:25:46 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-17T09:25:46 EDT" duration-ms="34" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.anirban.framework.selenium.bdd.runner.CucumberTestRunner@3590fc5b]" started-at="2023-04-17T11:14:48 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-17T11:14:49 EDT" duration-ms="44" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -61,7 +61,7 @@ at ✽.The user launches google page.(file:///D:/OneDrive%20-%20Infosys%20Limite
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at com.anirban.framework.selenium.driver.SetupDriver.quitDriver(SetupDriver.java:75)
+at com.anirban.framework.selenium.driver.SetupDriver.quitDriver(SetupDriver.java:78)
 at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook.java:31)
 ]]>
             </full-stacktrace>
@@ -69,7 +69,7 @@ at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.anirban.framework.selenium.bdd.runner.CucumberTestRunner@3590fc5b]" started-at="2023-04-17T09:25:46 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-17T09:25:46 EDT" duration-ms="18" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.anirban.framework.selenium.bdd.runner.CucumberTestRunner@3590fc5b]" started-at="2023-04-17T11:14:49 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-17T11:14:49 EDT" duration-ms="20" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -85,7 +85,7 @@ at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at com.anirban.framework.selenium.driver.SetupDriver.quitDriver(SetupDriver.java:75)
+at com.anirban.framework.selenium.driver.SetupDriver.quitDriver(SetupDriver.java:78)
 at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook.java:31)
 ]]>
             </full-stacktrace>
@@ -93,7 +93,7 @@ at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.anirban.framework.selenium.bdd.runner.CucumberTestRunner@3590fc5b]" started-at="2023-04-17T09:25:46 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-17T09:25:46 EDT" duration-ms="19" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.anirban.framework.selenium.bdd.runner.CucumberTestRunner@3590fc5b]" started-at="2023-04-17T11:14:49 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-17T11:14:49 EDT" duration-ms="13" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -109,7 +109,7 @@ at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at com.anirban.framework.selenium.driver.SetupDriver.quitDriver(SetupDriver.java:75)
+at com.anirban.framework.selenium.driver.SetupDriver.quitDriver(SetupDriver.java:78)
 at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook.java:31)
 ]]>
             </full-stacktrace>
@@ -117,7 +117,7 @@ at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.anirban.framework.selenium.bdd.runner.CucumberTestRunner@3590fc5b]" started-at="2023-04-17T09:25:46 EDT" name="tearDownClass" finished-at="2023-04-17T09:25:47 EDT" duration-ms="800" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.anirban.framework.selenium.bdd.runner.CucumberTestRunner@3590fc5b]" started-at="2023-04-17T11:14:49 EDT" name="tearDownClass" finished-at="2023-04-17T11:14:51 EDT" duration-ms="2638" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

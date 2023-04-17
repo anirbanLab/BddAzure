@@ -60,6 +60,8 @@ public class SetupDriver {
 			else
 				driver= new EdgeDriver(edgOPt);
 			
+			System.out.println(""+ (driver==null));
+			
 			return driver;
 		}
 
