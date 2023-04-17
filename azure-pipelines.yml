@@ -19,9 +19,9 @@ jobs:
          publishJUnitResults: true
          testResultsFiles: 'TestNG.xml'
          javaHomeOption: 'Path'
-         jdkDirectory: 'C:\Program Files\Java\jdk-12'
+         jdkDirectory: 'C:\Program Files\Java\jdk-11.0.14'
          mavenVersionOption: 'Path'
-         mavenDirectory: 'C:\Users\anirban.choudhuri\apache-maven-3.9.1-bin\apache-maven-3.9.1'
+         mavenDirectory: 'D:\anirban\apache-maven-3.9.0'
          mavenSetM2Home: true
          mavenAuthenticateFeed: false
          effectivePomSkip: false
@@ -46,7 +46,7 @@ jobs:
           artifact: TestResult
       - task: PublishHtmlReport@1
         inputs:
-          reportDir: 'C:/target/cucumber-report/CucumberExtentLogReport.html'
+          reportDir: '/target/cucumber-report/CucumberExtentLogReport.html'
       - task: NodeTool@0
         displayName: 'Install Node 12.x'
         inputs:
