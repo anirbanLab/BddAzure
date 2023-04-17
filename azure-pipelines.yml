@@ -11,6 +11,7 @@ jobs:
      vmImage: windows-latest
      name: Default
     steps:
+      
       - task: DockerCompose@0
         inputs:
           containerregistrytype: 'Azure Container Registry'
@@ -18,7 +19,8 @@ jobs:
           azureContainerRegistry: '{"loginServer":"registryarc.azurecr.io", "id" : "/subscriptions/cca1ed89-ca0a-432f-b3dd-1dee7e2db00c/resourceGroups/sg-rg-na/providers/Microsoft.ContainerRegistry/registries/registryarc"}'
           dockerComposeFile: 'docker-compose.yml'
           action: 'Run a Docker Compose command'
-          dockerComposeCommand: '-d up'
+          detached: true
+          dockerComposeCommand: 'up'
       - task: Maven@4
         continueOnError: true
         inputs:
@@ -74,4 +76,5 @@ jobs:
           azureContainerRegistry: '{"loginServer":"registryarc.azurecr.io", "id" : "/subscriptions/cca1ed89-ca0a-432f-b3dd-1dee7e2db00c/resourceGroups/sg-rg-na/providers/Microsoft.ContainerRegistry/registries/registryarc"}'
           dockerComposeFile: 'docker-compose.yml'
           action: 'Run a Docker Compose command'
-          dockerComposeCommand: '-d down'
+          detached: true
+          dockerComposeCommand: 'down'
