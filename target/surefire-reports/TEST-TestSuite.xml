@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="4" failures="4" name="TestSuite" time="10.998" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="12+33"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-12\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\OneDrive - Infosys Limited\projects\eclipse\workspace2\BDDSeleTest"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\OneDrive - Infosys Limited\projects\eclipse\workspace2\BDDSeleTest"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="12+33"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\ANIRBA~1.CHO\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="D:\OneDrive - Infosys Limited\projects\eclipse\workspace2\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf649803955314868114.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-12\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Zulu/zulu-17/bin/server;C:/Program Files/Zulu/zulu-17/bin;C:\Program Files\Zulu\zulu-17\bin\;C:\Program Files\Python39\Scripts\;C:\Program Files\Python39\;C:\Program Files\Python38\Scripts\;C:\Program Files\Python38\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;D:\install\python-3.9\Scripts\;D:\install\python-3.9\;C:\Users\anirban.choudhuri\AppData\Local\Programs\Python\Launcher\;D:\Python38\;D:\Python38\scripts\;C:\Users\anirban.choudhuri\AppData\Local\Microsoft\WindowsApps;C:\Users\anirban.choudhuri\AppData\Local\atom\bin;C:\Users\anirban.choudhuri\AppData\Local\Microsoft\WindowsApps;C:\Users\anirban.choudhuri\Downloads\node-v18.16.0-win-x64\node-v18.16.0-win-x64;;D:\EclipseIDEforJavaDevelopers-4.10;;."/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="56.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\anirban.choudhuri"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.specification.version" value="12"/>
+    <property name="user.name" value="anirban.choudhuri"/>
+    <property name="java.class.path" value="D:\EclipseIDEforJavaDevelopers-4.10\plugins\org.eclipse.m2e.maven.runtime_1.10.0.20181127-2120\jars\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="12"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean install"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-12"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="12"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\OneDrive - Infosys Limited\projects\eclipse\workspace2\BDDSeleTest\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2019-03-19"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.anirban.framework.selenium.bdd.runner.CucumberTestRunner" name="runScenario" time="10.94">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.anirban.framework.selenium.bdd.stepDef.GoogleSearchStepDef.the_user_launches_google_page(GoogleSearchStepDef.java:30)
+	at ✽.The user launches google page.(file:///D:/OneDrive%20-%20Infosys%20Limited/projects/eclipse/workspace2/BDDSeleTest/src/test/resources/features/GoogleSearch.feature:4)
+</failure>
+    <system-out>
+Scenario Outline: User doing a google search. # src/test/resources/features/GoogleSearch.feature:10
+  Given The user launches google page.        # com.anirban.framework.selenium.bdd.stepDef.GoogleSearchStepDef.the_user_launches_google_page()
+      java.lang.NullPointerException
+	at com.anirban.framework.selenium.bdd.stepDef.GoogleSearchStepDef.the_user_launches_google_page(GoogleSearchStepDef.java:30)
+	at âœ½.The user launches google page.(file:///D:/OneDrive%20-%20Infosys%20Limited/projects/eclipse/workspace2/BDDSeleTest/src/test/resources/features/GoogleSearch.feature:4)
+
+  When The user enters &quot;Selenium java&quot;.       # com.anirban.framework.selenium.bdd.stepDef.GoogleSearchStepDef.the_user_enters(java.lang.String)
+  And user clicks the go button.              # com.anirban.framework.selenium.bdd.stepDef.GoogleSearchStepDef.user_clicks_the_go_button()
+  Then User gets into the result page.        # com.anirban.framework.selenium.bdd.stepDef.GoogleSearchStepDef.user_gets_into_the_result_page()
+      java.lang.NullPointerException
+	at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook.java:28)
+
+</system-out>
+    <system-err>Apr 17, 2023 9:20:27 AM org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer createTracer
+INFO: Using OpenTelemetry for tracing
+SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: no chrome binary at C:\Program Files (x86)\Google\Chrome Beta\Application\chrome.exe 
+Host info: host: &apos;0faa21d46fdc&apos;, ip: &apos;172.18.0.5&apos;
+Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.10.16.3-microsoft-standard-WSL2&apos;, java.version: &apos;11.0.17&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.10.16.3-microsoft-standard-WSL2&apos;, java.version: &apos;11.0.17&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.10.16.3-microsoft-standard-WSL2&apos;, java.version: &apos;11.0.17&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*, start-maximized], binary: C:\Program Files (x86)\Goog..., extensions: []}}], desiredCapabilities=Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*, start-maximized], binary: C:\Program Files (x86)\Goog..., extensions: []}}}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*, start-maximized], binary: C:\Program Files (x86)\Goog..., extensions: []}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:165)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:139)
+	at com.anirban.framework.selenium.driver.SetupDriver.getDriver(SetupDriver.java:36)
+	at com.anirban.framework.selenium.bdd.stepDef.GoogleSearchStepDef.the_user_launches_google_page(GoogleSearchStepDef.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</system-err>
+  </testcase>
+  <testcase classname="com.anirban.framework.selenium.bdd.runner.CucumberTestRunner" name="runScenario" time="0.016">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.anirban.framework.selenium.driver.SetupDriver.quitDriver(SetupDriver.java:75)
+	at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook.java:31)
+</failure>
+    <system-out>
+Scenario Outline: User login with valid data # src/test/resources/features/NewRegistrationFeature.feature:10
+  Given The user launches the login page.    # com.anirban.framework.selenium.bdd.stepDef.MyPageFeatureStepDef.the_user_launches_the_login_page()
+  And The user enters &quot;aaa&quot; and &quot;pwd123&quot;.    # com.anirban.framework.selenium.bdd.stepDef.MyPageFeatureStepDef.the_user_enters_and(java.lang.String,java.lang.String)
+  When user clicks the login button.         # com.anirban.framework.selenium.bdd.stepDef.MyPageFeatureStepDef.user_clicks_the_login_button()
+  Then User gets into the home page.         # com.anirban.framework.selenium.bdd.stepDef.MyPageFeatureStepDef.user_gets_into_the_home_page()
+      java.lang.NullPointerException
+	at com.anirban.framework.selenium.driver.SetupDriver.quitDriver(SetupDriver.java:75)
+	at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook.java:31)
+
+</system-out>
+  </testcase>
+  <testcase classname="com.anirban.framework.selenium.bdd.runner.CucumberTestRunner" name="runScenario" time="0.018">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.anirban.framework.selenium.driver.SetupDriver.quitDriver(SetupDriver.java:75)
+	at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook.java:31)
+</failure>
+    <system-out>
+Scenario Outline: User login with in valid data # src/test/resources/features/NewRegistrationFeature.feature:19
+  Given The user launches the login page.       # com.anirban.framework.selenium.bdd.stepDef.MyPageFeatureStepDef.the_user_launches_the_login_page()
+  And The user enters &quot;aac&quot; and &quot;pws123&quot;.       # com.anirban.framework.selenium.bdd.stepDef.MyPageFeatureStepDef.the_user_enters_and(java.lang.String,java.lang.String)
+  When user clicks the login button.            # com.anirban.framework.selenium.bdd.stepDef.MyPageFeatureStepDef.user_clicks_the_login_button()
+  Then User do not get into the home page.      # com.anirban.framework.selenium.bdd.stepDef.MyPageFeatureStepDef.user_do_not_get_into_the_home_page()
+      java.lang.NullPointerException
+	at com.anirban.framework.selenium.driver.SetupDriver.quitDriver(SetupDriver.java:75)
+	at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook.java:31)
+
+</system-out>
+  </testcase>
+  <testcase classname="com.anirban.framework.selenium.bdd.runner.CucumberTestRunner" name="runScenario" time="0.024">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.anirban.framework.selenium.driver.SetupDriver.quitDriver(SetupDriver.java:75)
+	at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook.java:31)
+</failure>
+    <system-out>
+Scenario Outline: User login with in valid data # src/test/resources/features/NewRegistrationFeature.feature:20
+  Given The user launches the login page.       # com.anirban.framework.selenium.bdd.stepDef.MyPageFeatureStepDef.the_user_launches_the_login_page()
+  And The user enters &quot;bba&quot; and &quot;qwe123&quot;.       # com.anirban.framework.selenium.bdd.stepDef.MyPageFeatureStepDef.the_user_enters_and(java.lang.String,java.lang.String)
+  When user clicks the login button.            # com.anirban.framework.selenium.bdd.stepDef.MyPageFeatureStepDef.user_clicks_the_login_button()
+  Then User do not get into the home page.      # com.anirban.framework.selenium.bdd.stepDef.MyPageFeatureStepDef.user_do_not_get_into_the_home_page()
+      java.lang.NullPointerException
+	at com.anirban.framework.selenium.driver.SetupDriver.quitDriver(SetupDriver.java:75)
+	at com.anirban.framework.selenium.bdd.stepDef.CucumberHook.tearDown(CucumberHook.java:31)
+
+</system-out>
+  </testcase>
+</testsuite>

@@ -6,11 +6,12 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 
 import com.anirban.framework.selenium.core.GetElement;
 import com.anirban.framework.selenium.driver.SetupDriver;
-import com.anirban.framework.testng.util.Assert;
 
+import io.cucumber.core.backend.Container;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,10 +23,12 @@ public class GoogleSearchStepDef {
 	@Given("The user launches google page.")
 	public void the_user_launches_google_page() {
 		try {
-			driver=SetupDriver.getDriver("chrome", "standalone", "");
+			driver=SetupDriver.getDriver("edge", "GRID", "http://192.168.1.105:4444/wd/hub");
 		}catch(Exception exp) {
 			exp.printStackTrace();
 		}
+		
+		driver.manage().window().maximize();
 		driver.get("https://www.google.com/");
 
 		//additional step for not choosing an existing user.
@@ -52,6 +55,7 @@ public class GoogleSearchStepDef {
 	public void user_gets_into_the_result_page() {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofMillis(2000));
 		String s=driver.getTitle();
-		Assert.contains(Assert.HARD, searchString, s);
+		//Assert.assertEquals(true, false);
+		Assert.assertEquals(s, searchString);
 	}
 }

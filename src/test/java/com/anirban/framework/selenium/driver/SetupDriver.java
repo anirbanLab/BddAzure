@@ -54,6 +54,7 @@ public class SetupDriver {
 		}
 		else if(sbrowser.equalsIgnoreCase("edge")) {
 			edgOPt=new EdgeOptions();
+			edgOPt.setAcceptInsecureCerts(true);
 			if(sMode.equalsIgnoreCase("GRID"))
 				driver= new RemoteWebDriver(new URL(server),edgOPt );
 			else
