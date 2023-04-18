@@ -24,10 +24,10 @@ public class CucumberHook {
 	 @After
 	    public static void tearDown(Scenario scenario) {
 	        //validate if scenario has failed
-	      //  if(scenario.isFailed()) {
+	       if(scenario.getName().contentEquals("google search")) {
 	            final byte[] screenshot = ((TakesScreenshot)SetupDriver.getDriver()).getScreenshotAs(OutputType.BYTES);
 	            scenario.attach(screenshot, "image/png", scenario.getName()); 
-	       // }      
+	        }      
 	       SetupDriver.quitDriver();
 	    }
 	    //@AFter
