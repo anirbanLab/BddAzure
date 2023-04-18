@@ -12,10 +12,8 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
-
 import com.anirban.framework.selenium.core.GetElement;
 import com.anirban.framework.selenium.driver.SetupDriver;
-
 import io.cucumber.core.backend.Container;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
@@ -29,8 +27,8 @@ public class GoogleSearchStepDef {
 	@Given("The user launches google page.")
 	public void the_user_launches_google_page() {
 		try {
-			driver=SetupDriver.getDriver("chrome", "GRID", "http://20.12.80.186:4444/wd/hub");
-			//driver=SetupDriver.getDriver("edge", "GRID", "http://localhost:4444/wd/hub");
+			//driver=SetupDriver.getDriver("chrome", "GRID", "http://20.12.123.79:4444/wd/hub");
+			 driver=SetupDriver.getDriver("edge", "GRID", "http://localhost:4444/wd/hub");
 			//driver=SetupDriver.getDriver("chrome", "standalone", "");
 			//EdgeOptions edgOPt=new EdgeOptions();
 			//edgOPt.setAcceptInsecureCerts(true);
