@@ -29,8 +29,8 @@ public class GoogleSearchStepDef {
 	@Given("The user launches google page.")
 	public void the_user_launches_google_page() {
 		try {
-			//driver=SetupDriver.getDriver("edge", "GRID", "http://localhost:4444/wd/hub");
-			driver=SetupDriver.getDriver("chrome", "standalone", "");
+			driver=SetupDriver.getDriver("edge", "GRID", "http://localhost:4444/wd/hub");
+			//driver=SetupDriver.getDriver("chrome", "standalone", "");
 			//EdgeOptions edgOPt=new EdgeOptions();
 			//edgOPt.setAcceptInsecureCerts(true);
 			//driver =new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), edgOPt);
