@@ -24,7 +24,9 @@ public class CucumberHook {
 	 @After
 	    public static void tearDown(Scenario scenario) {
 	        //validate if scenario has failed
-	       if(scenario.getName().contentEquals("google search")) {
+		 
+		   System.out.println("Scenario name: "+scenario.getName());
+	       if(scenario.getName().equalsIgnoreCase("User doing a google search.")) {
 	            final byte[] screenshot = ((TakesScreenshot)SetupDriver.getDriver()).getScreenshotAs(OutputType.BYTES);
 	            scenario.attach(screenshot, "image/png", scenario.getName()); 
 	        }      
