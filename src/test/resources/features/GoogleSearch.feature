@@ -8,4 +8,3 @@ Then User gets into the result page.
 Examples:
 | searchData |
 | Selenium java |
-| Docker Images |

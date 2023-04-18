@@ -4,6 +4,8 @@ import java.net.URL;
 import java.time.Duration;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeOptions;
@@ -59,10 +61,12 @@ public class GoogleSearchStepDef {
 	}
 
 	@Then("User gets into the result page.")
-	public void user_gets_into_the_result_page() {
+	public void user_gets_into_the_result_page(Scenario scenario) {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofMillis(2000));
 		String s=driver.getTitle();
 		System.out.println("Page title: "+s);
+		 final byte[] screenshot = ((TakesScreenshot)SetupDriver.getDriver()).getScreenshotAs(OutputType.BYTES);
+         scenario.attach(screenshot, "image/png", scenario.getName()); 
 		//Assert.assertEquals(true, false);
 		//Assert.assertEquals(s, searchString);
 	}
