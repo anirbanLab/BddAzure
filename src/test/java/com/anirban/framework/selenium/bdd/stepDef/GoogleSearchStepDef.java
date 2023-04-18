@@ -61,12 +61,10 @@ public class GoogleSearchStepDef {
 	}
 
 	@Then("User gets into the result page.")
-	public void user_gets_into_the_result_page(Scenario scenario) {
+	public void user_gets_into_the_result_page() {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofMillis(2000));
 		String s=driver.getTitle();
 		System.out.println("Page title: "+s);
-		 final byte[] screenshot = ((TakesScreenshot)SetupDriver.getDriver()).getScreenshotAs(OutputType.BYTES);
-         scenario.attach(screenshot, "image/png", scenario.getName()); 
 		//Assert.assertEquals(true, false);
 		//Assert.assertEquals(s, searchString);
 	}
