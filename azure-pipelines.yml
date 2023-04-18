@@ -35,11 +35,9 @@ jobs:
          mavenAuthenticateFeed: false
          effectivePomSkip: false
          sonarQubeRunAnalysis: false
-      - task: DeleteFiles@1
-        continueOnError: true
+      - task: BatchScript@1
         inputs:
-          SourceFolder: 'D:/target/*.*'
-          Contents: 'delete files under target folder'
+          filename: 'run.bat'
       - task: CopyFiles@2
         continueOnError: true
         inputs:
