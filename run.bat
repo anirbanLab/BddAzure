@@ -1,2 +1,2 @@
-del /s /q D:\target\*
-rmdir /s /q D:\target
+del /s /q C:\target\*
+rmdir /s /q C:\target
