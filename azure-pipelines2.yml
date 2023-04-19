@@ -11,6 +11,15 @@ jobs:
      vmImage: windows-latest
      name: Default
     steps:
+      - task: DockerCompose@0
+        inputs:
+         detached: true
+         containerregistrytype: 'Azure Container Registry'
+         azureSubscription: 'Azure subscription 1(cca1ed89-ca0a-432f-b3dd-1dee7e2db00c)'
+         azureContainerRegistry: '{"loginServer":"registryarc.azurecr.io", "id" : "/subscriptions/cca1ed89-ca0a-432f-b3dd-1dee7e2db00c/resourceGroups/sg-rg-na/providers/Microsoft.ContainerRegistry/registries/registryarc"}'
+         dockerComposeFile: 'docker-compose.yml'
+         action: 'Run a Docker Compose command'
+         dockerComposeCommand: 'up -d'
       - task: Maven@4
         continueOnError: true
         inputs:
@@ -19,9 +28,9 @@ jobs:
          publishJUnitResults: true
          testResultsFiles: 'TestNG.xml'
          javaHomeOption: 'Path'
-         jdkDirectory: 'C:\Program Files\Java\jdk-12'
+         jdkDirectory: 'C:\Program Files\Java\jdk-11.0.14'
          mavenVersionOption: 'Path'
-         mavenDirectory: 'D:\apache-maven-3.9.1-bin\apache-maven-3.9.1'
+         mavenDirectory: 'D:\anirban\apache-maven-3.9.0'
          mavenSetM2Home: true
          mavenAuthenticateFeed: false
          effectivePomSkip: false
@@ -34,7 +43,7 @@ jobs:
         inputs:
           SourceFolder: 'target'
           Contents: '**'
-          TargetFolder: 'C:/target'
+          TargetFolder: 'D:/target'
           OverWrite: true
           preserveTimestamp: true
       - task: PublishPipelineArtifact@1
@@ -57,3 +66,12 @@ jobs:
           reportSuiteAsScenarios: true
           name: 'HTML_REPORT_CUCUMBER'
           title: 'Execution report'
+      - task: DockerCompose@0
+        inputs:
+          detached: true
+          containerregistrytype: 'Azure Container Registry'
+          azureSubscription: 'Azure subscription 1(cca1ed89-ca0a-432f-b3dd-1dee7e2db00c)'
+          azureContainerRegistry: '{"loginServer":"registryarc.azurecr.io", "id" : "/subscriptions/cca1ed89-ca0a-432f-b3dd-1dee7e2db00c/resourceGroups/sg-rg-na/providers/Microsoft.ContainerRegistry/registries/registryarc"}'
+          dockerComposeFile: 'docker-compose.yml'
+          action: 'Run a Docker Compose command'
+          dockerComposeCommand: 'down'
