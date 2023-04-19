@@ -27,6 +27,7 @@ jobs:
          effectivePomSkip: false
          sonarQubeRunAnalysis: false
       - task: BatchScript@1
+        continueOnError: true
         inputs:
           filename: 'run.bat'
       - task: CopyFiles@2
